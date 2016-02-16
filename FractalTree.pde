@@ -26,6 +26,7 @@ public void drawBranches(int x,int y, double branchLength, double angle)
 	endY1 = (int)(bL*Math.sin(angle1) + y);
 	endX2 = (int)(bL*Math.cos(angle2) + x);
 	endY2 = (int)(bL*Math.sin(angle2) + y);
+
 	stroke((int)(bL),255,y);
 	line(x, y, endX1, endY1);
 	line(x,y, endX2, endY2);
@@ -42,3 +43,5 @@ public void drawBranches(int x,int y, double branchLength, double angle)
 		
 	}
 } 
+
+// maybe recursively draw trees of varying sizes
