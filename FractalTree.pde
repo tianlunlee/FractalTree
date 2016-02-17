@@ -3,15 +3,15 @@ private int smallestBranch = 10;
 private double branchAngle = .2;  
 public void setup() 
 {   
-	size(640,480);    
-	noLoop(); 
+	size(800,480);    
+
 } 
 public void draw() 
 {   
 	background(0);   
 	   
-	line(320,480,320,380);   
-	drawBranches(320, 380, 100, 3*Math.PI/2);  //will add later 
+	
+	redraw(580, 380, 100, 3*Math.PI/2);  //will add later 
 } 
 public void drawBranches(int x,int y, double branchLength, double angle) 
 {   
@@ -44,4 +44,14 @@ public void drawBranches(int x,int y, double branchLength, double angle)
 	}
 } 
 
+public void redraw(int x, int y, double branchLength, double angle) {
+	drawBranches(x, 380, branchLength, 3*Math.PI/2);
+	if (x <= 0) {
+     
+	}
+
+	else {
+		redraw(x -75, 380, branchLength*0.75, 3*Math.PI/2);
+	}
+}
 // maybe recursively draw trees of varying sizes
